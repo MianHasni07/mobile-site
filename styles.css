@@ -1,0 +1,214 @@
+/* ===== General Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* ===== Header ===== */
+  .header {
+    background: linear-gradient(90deg, #000, orangered);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    box-shadow: 0 0 10px orangered;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .header h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+  
+  .cart-link {
+    background: #000;
+    color: orangered;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid orangered;
+    transition: 0.3s ease;
+  }
+  
+  .cart-link:hover {
+    background: orangered;
+    color: #fff;
+    box-shadow: 0 0 10px orangered;
+  }
+  
+  #cart-count {
+    background: orangered;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px 7px;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+  
+  /* ===== Products Section ===== */
+  .products {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .products h2 {
+    color: orangered;
+    font-size: 28px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .products h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: orangered;
+    margin: 10px auto;
+    border-radius: 2px;
+  }
+  
+  /* ===== Product Grid ===== */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 10px;
+  }
+  
+  /* ===== Product Card ===== */
+  .product {
+    background: #1b1b1b;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0 0px rgba(255, 69, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  
+  .product:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 15px orangered;
+  }
+  
+  .product img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+  }
+  
+  .product:hover img {
+    transform: scale(1.05);
+  }
+  
+  .product h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .price {
+    margin: 8px 0;
+    font-weight: bold;
+    color: orangered;
+    font-size: 16px;
+  }
+  
+  /* ===== Add to Cart Button ===== */
+  .add-to-cart {
+    background: orangered;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .add-to-cart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-45deg);
+    transition: left 0.5s ease;
+  }
+  
+  .add-to-cart:hover::before {
+    left: 100%;
+  }
+  
+  .add-to-cart:hover {
+    background: #ff4c00;
+    box-shadow: 0 0 10px orangered;
+    transform: translateY(-2px);
+  }
+  
+  /* ===== Animations ===== */
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Delay animations for each product for staggered effect */
+  .product:nth-child(1) { animation-delay: 0.1s; }
+  .product:nth-child(2) { animation-delay: 0.2s; }
+  .product:nth-child(3) { animation-delay: 0.3s; }
+  .product:nth-child(4) { animation-delay: 0.4s; }
+  .product:nth-child(5) { animation-delay: 0.5s; }
+  .product:nth-child(6) { animation-delay: 0.6s; }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 18px;
+    }
+  
+    .cart-link {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  
+    .product img {
+      height: 150px;
+    }
+  
+    .add-to-cart {
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .products h2 {
+      font-size: 22px;
+    }
+  }
+  
