@@ -1,0 +1,151 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+  }
+  
+  /* Container */
+  .checkout-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 0 20px rgba(255, 60, 0, 0.4);
+    animation: slideIn 1s ease;
+    backdrop-filter: blur(10px);
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .checkout-container h1 {
+    text-align: center;
+    color: #ff3c00;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+  
+  /* Form */
+  .order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group label {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 1rem;
+    transition: 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: #ff3c00;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
+  }
+  
+  /* Button */
+  .place-btn {
+    background: #ff3c00;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .place-btn:hover {
+    background: #fff;
+    color: #ff3c00;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 60, 0, 0.5);
+  }
+  
+  /* Success Message */
+  .success-message {
+    display: none;
+    text-align: center;
+    animation: fadeIn 1s ease;
+  }
+  
+  .success-message i {
+    color: #28a745;
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  
+  .success-message h2 {
+    color: #ff3c00;
+    margin-bottom: 8px;
+  }
+  
+  .download-btn {
+    background: #ff3c00;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .download-btn:hover {
+    background: #fff;
+    color: #ff3c00;
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .checkout-container {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    .checkout-container h1 {
+      font-size: 1.5rem;
+    }
+  }
+  

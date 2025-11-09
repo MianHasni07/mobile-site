@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Accessories - Products</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>MobileHub Accessories</h1>
+  <a href="cart.html" class="cart-link">🛒 Cart <span id="cart-count">0</span></a>
+</header>
+
+<section class="products">
+  <h2>Our Products</h2>
+
+  <div class="product" 
+     data-id="1" 
+     data-name="Wireless Earbuds" 
+     data-price="1499" 
+     data-img="https://xcessorieshub.com/wp-content/uploads/2024/10/1HORA-Wired-Handfree-3.5mm.webp">
+
+  <img src="https://static-01.daraz.pk/p/5767150f56443239752beef9918a86ac.jpg" alt="">
+  <h3>Wireless Earbuds</h3>
+  <p class="price">₹1499</p>
+
+  <!-- The working button -->
+  <!-- <button class="add-to-cart">Add to Cart</button>
+</div>
+<div class="product" 
+     data-id="2" 
+     data-name="Wireless Earbuds" 
+     data-price="1499" 
+     data-img="https://m.media-amazon.com/images/I/61d6h1NTfEL._SL1500_.jpg">
+
+  <img src="https://m.media-amazon.com/images/I/61d6h1NTfEL._SL1500_.jpg" alt="">
+  <h3>Wireless Earbuds</h3>
+  <p class="price">₹1499</p>
+
+  <!-- The working button -->
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+<div class="product" 
+     data-id="3" 
+     data-name="Wireless Earbuds" 
+     data-price="1499" 
+     data-img="https://m.media-amazon.com/images/I/61d6h1NTfEL._SL1500_.jpg">
+
+  <img src="https://m.media-amazon.com/images/I/61d6h1NTfEL._SL1500_.jpg" alt="">
+  <h3>Wireless Earbuds</h3>
+  <p class="price">₹1499</p>
+
+  <!-- The working button -->
+  <button class="add-to-cart">Add to Cart</button>
+</div>
+
+  <div class="product-grid">
+    <div class="product" data-id="1" data-name="Wireless Earbuds" data-price="1499" data-img="https://m.media-amazon.com/images/I/61d6h1NTfEL._SL1500_.jpg">
+      <img src="https://m.media-amazon.com/images/I/61d6h1NTfEL._SL1500_.jpg" alt="">
+      <h3>Wireless Earbuds</h3>
+      <p class="price">₹1499</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div> -->
+
+    <div class="product" data-id="2" data-name="Fast Charger" data-price="799" data-img="https://m.media-amazon.com/images/I/61dSMf8x84L._SL1500_.jpg">
+      <img src="https://m.media-amazon.com/images/I/61dSMf8x84L._SL1500_.jpg" alt="">
+      <h3>Fast Charger</h3>
+      <p class="price">₹799</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product" data-id="3" data-name="Mobile Case" data-price="499" data-img="https://m.media-amazon.com/images/I/71B9+-b-5IL._SL1500_.jpg">
+      <img src="https://m.media-amazon.com/images/I/71B9+-b-5IL._SL1500_.jpg" alt="">
+      <h3>Mobile Case</h3>
+      <p class="price">₹499</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product" data-id="4" data-name="Power Bank" data-price="1999" data-img="https://m.media-amazon.com/images/I/71t9GUXoKPL._SL1500_.jpg">
+      <img src="https://m.media-amazon.com/images/I/71t9GUXoKPL._SL1500_.jpg" alt="">
+      <h3>Power Bank</h3>
+      <p class="price">₹1999</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</section>
+<script> -->
+<!-- // Select all Add to Cart buttons and cart counter -->
+const cartButtons = document.querySelectorAll('.add-to-cart');
+const cartCount = document.getElementById('cart-count');
+
+// Load existing cart from localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Update cart count badge
+if (cartCount) {
+  cartCount.textContent = cart.length;
+}
+
+// Add click event for each button
+cartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Get product info from its parent element
+    const product = button.closest('.product');
+    const id = product.dataset.id;
+    const name = product.dataset.name;
+    const price = parseFloat(product.dataset.price);
+    const img = product.dataset.img;
+
+    // Check if product already exists in cart
+    const existingProduct = cart.find(item => item.id === id);
+
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      cart.push({ id, name, price, img, quantity: 1 });
+    }
+
+    // Save updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Update cart count display
+    if (cartCount) {
+      cartCount.textContent = cart.length;
+    }
+
+    // Show quick success animation
+    button.textContent = "Added ✓";
+    button.style.backgroundColor = "green";
+    button.style.transform = "scale(1.05)";
+    button.style.transition = "all 0.3s";
+
+    setTimeout(() => {
+      button.textContent = "Add to Cart";
+      button.style.backgroundColor = "orangered";
+      button.style.transform = "scale(1)";
+    }, 1000);
+  });
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

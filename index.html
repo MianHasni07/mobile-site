@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Accessories Navbar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <header>
+        <div class="site-logo" id="siteLogo">
+          <i class="fas fa-bolt"></i>
+          <span>Mobile<span class="highlight">X</span></span>
+        </div>
+      </header>
+
+      
+    <!-- <div class="logo">MobileX</div>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div> -->
+    <ul class="nav-menu">
+      <li><a href="#" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="product.html" class="nav-link">Product</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+      <li><a href="cart.html" class="nav-link cart-btn">Cart 🛒</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="categories-bar-wrapper">
+    <div class="categories-bar">
+      <a href="#" class="category">Headphones</a>
+      <a href="#" class="category">Air Buds</a>
+      <a href="#" class="category">Mobile Cover</a>
+      <a href="#" class="category">Hand Free</a>
+      <a href="#" class="category">USB</a>
+      <a href="#" class="category">Glass Protector</a>
+      <a href="#" class="category">Privacy Protector</a>
+      <a href="#" class="category">Wireless Charger</a>
+      <a href="#" class="category">Power Banks</a>
+      <a href="#" class="category">Charging Cable</a>
+      <a href="#" class="category">Charger</a>
+      <a href="#" class="category">Memory Cards</a>
+      <a href="#" class="category">Mobile Cover</a>
+    </div>
+  </div>
+  
+
+
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Upgrade Your <span id="animated-text">Headphones</span></h1>
+      <p>Explore the best mobile accessories for your device.</p>
+      <div class="hero-buttons">
+        <a href="product.html" class="btn show-now">Shop Now</a>
+        <a href="explore.html" class="btn explore-more">Explore More</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-images">
+        <img src="https://cdn.shopify.com/s/files/1/1603/9553/files/Harmonics_Twins_S10_Mobile_headphones_best_tws_earphones_480x480.webp?v=1722323783" alt="Accessory 1">
+        <img src="https://images.philips.com/is/image/philipsconsumer/491e2dd5e0d1466f8ee5b0cd010451ae?wid=700&hei=700&$pnglarge$" alt="Accessory 2">
+        <img src="https://i.pinimg.com/736x/18/71/7c/18717c02715c47bebc22dc1d7aff2dd3.jpg" alt="Accessory 3">
+        <img src="https://img.drz.lazcdn.com/static/pk/p/133d2b5fd7a5aec007506e07d7f76fbd.jpg_720x720q80.jpg" alt="acories 4">
+        <img src="https://img.drz.lazcdn.com/static/pk/p/0f0ee830c96aca9c0aa4642e0561bbec.jpg_720x720q80.jpg" alt="Accessory 5">
+        <img src="https://d1iv6qgcmtzm6l.cloudfront.net/products/lg_8x18q0LxvawLum45iL13sa5cZ3DoMLITFj3VCFnF.png" alt="">
+      </div>
+    </div>
+    <script>
+      // 🌠 Animated Hero Text
+      const texts = ["Headphones", "Air Buds", "Mobile Covers", "Power Banks", "Chargers"];
+      let index = 0;
+      
+      function changeText() {
+        const textElement = document.getElementById("animated-text");
+        
+        // Fade out
+        textElement.style.opacity = 0;
+        
+        setTimeout(() => {
+          // Change text
+          index = (index + 1) % texts.length;
+          textElement.textContent = texts[index];
+          
+          // Fade in
+          textElement.style.opacity = 1;
+        }, 500); // matches CSS transition
+      }
+      
+      // Change text every 2.5 seconds
+      setInterval(changeText, 1500);
+      </script>
+  </section>
+
+  <section id="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="https://png.pngtree.com/background/20250806/original/pngtree-smart-phone-with-online-shop-concept-on-screen-all-screen-content-picture-image_15471157.jpg" alt="About Us">
+      </div>
+      <div class="about-content">
+        <h2>About MobileX</h2>
+        <p>We are passionate about providing the latest mobile accessories with premium quality and stylish designs. From headphones to chargers, we ensure every product meets your expectations.</p>
+        <p>Our mission is to make your mobile experience seamless, fun, and reliable.</p>
+        <a href="product.html" class="btn">Explore Products</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="new-arrivals">
+    <div class="section-header">
+      <h2>Our New Arrivals</h2>
+      <p>Check out the latest mobile accessories just for you!</p>
+    </div>
+  
+    <div class="arrivals-container">
+      <!-- Product Card -->
+      <div class="arrival-card" data-aos="fade-up"
+        data-id="6" 
+       data-name="Wireless Earbuds" 
+        data-price="1499" 
+        data-img="https://cdn.shopify.com/s/files/1/1603/9553/files/Harmonics_Twins_S10_Mobile_headphones_best_tws_earphones_480x480.webp?v=1722323783">
+
+        <img src="https://cdn.shopify.com/s/files/1/1603/9553/files/Harmonics_Twins_S10_Mobile_headphones_best_tws_earphones_480x480.webp?v=1722323783" alt="Wireless Earbuds">
+        <h3>Wireless Earbuds</h3>
+        <p class="price">$55</p>
+        <button class="add-to-cart" >Add to Cart <i class="fas fa-cart-plus"></i></button>
+      
+        <!-- <button class="add-cart-btn">Add to Cart <i class="fas fa-cart-plus"></i></button> -->
+      </div>
+  
+      <div class="arrival-card" data-aos="fade-up"
+      data-id="7" 
+      data-name="Head Phone" 
+       data-price="40" 
+       data-img="https://images.philips.com/is/image/philipsconsumer/491e2dd5e0d1466f8ee5b0cd010451ae?wid=700&hei=700&$pnglarge$">
+        <img src="https://images.philips.com/is/image/philipsconsumer/491e2dd5e0d1466f8ee5b0cd010451ae?wid=700&hei=700&$pnglarge$" alt="Power Bank">
+        <h3>Head Phone</h3>
+        <p class="price">$40</p>
+        <button class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+      </div>
+  
+      <div class="arrival-card" data-aos="fade-up"
+      data-id="8" 
+      data-name="Mobile Cover" 
+       data-price="20" 
+       data-img="https://i.pinimg.com/736x/18/71/7c/18717c02715c47bebc22dc1d7aff2dd3.jpg">
+        <img src="https://i.pinimg.com/736x/18/71/7c/18717c02715c47bebc22dc1d7aff2dd3.jpg" alt="Mobile Cover">
+        <h3>Mobile Cover</h3>
+        <p class="price">$20</p>
+        <button class="add-to-cart" >Add to Cart <i class="fas fa-cart-plus"></i></button>
+        <!-- <button class="add-cart-btn">Add to Cart <i class="fas fa-cart-plus"></i></button> -->
+      </div>
+  
+      <div class="arrival-card" data-aos="fade-up" 
+      data-id="9" 
+      data-name="Air Buds" 
+       data-price="35" 
+       data-img="https://d1iv6qgcmtzm6l.cloudfront.net/products/lg_8x18q0LxvawLum45iL13sa5cZ3DoMLITFj3VCFnF.png">>
+      
+        <img src="https://d1iv6qgcmtzm6l.cloudfront.net/products/lg_8x18q0LxvawLum45iL13sa5cZ3DoMLITFj3VCFnF.png" alt="air Buds">
+        <h3>Air Buds</h3>
+        <p class="price">$35</p>
+        <button class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+      </div>
+    </div>
+    <script>
+      // Select all Add to Cart buttons and cart counter
+      const cartButtons = document.querySelectorAll('.add-to-cart');
+      const cartCount = document.getElementById('cart-count');
+      
+      // Load existing cart from localStorage
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      
+      // Update cart count badge
+      if (cartCount) {
+        cartCount.textContent = cart.length;
+      }
+      
+      // Add click event for each button
+      cartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const product = button.closest('.arrival-card');
+          const id = product.dataset.id;
+          const name = product.dataset.name;
+          const price = parseFloat(product.dataset.price);
+          const img = product.dataset.img;
+      
+          const existingProduct = cart.find(item => item.id === id);
+      
+          if (existingProduct) {
+            existingProduct.quantity += 1;
+          } else {
+            cart.push({ id, name, price, img, quantity: 1 });
+          }
+      
+          localStorage.setItem('cart', JSON.stringify(cart));
+      
+          if (cartCount) {
+            cartCount.textContent = cart.length;
+          }
+      
+          // Button animation feedback
+          button.textContent = "Added ✓";
+          button.style.backgroundColor = "green";
+          button.style.transform = "scale(1.1)";
+          button.style.transition = "all 0.3s";
+      
+          setTimeout(() => {
+            button.textContent = "Add to Cart";
+            button.style.backgroundColor = "orangered";
+            button.style.transform = "scale(1)";
+          }, 1000);
+        });
+      });
+      </script>
+  
+    <div class="view-more">
+      <a href="product.html" class="btn">View More Products</a>
+    </div>
+  </section>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Left Section: Quick Links -->
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="explore.html">Explore more</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="cart.html">Your Cart</a></li>
+        </ul>
+      </div>
+  
+      <!-- Middle Section: Contact & Map -->
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p><strong>Email</strong>MobileX123@gmail.com</p>
+        <p><strong>Location:</strong> Main Street, New Delhi, India</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <div class="map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.387654736417!2d77.21672151508363!3d28.61393998242469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd3c0bbad4ff%3A0x47e9b2a7b1c5c42f!2sConnaught%20Place%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1699971989739!5m2!1sen!2sin"
+            width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+  
+      <!-- Right Section: Store & Socials -->
+      <div class="footer-section store-socials">
+        <h3>Get Our App</h3>
+        <a href="https://play.google.com/store" target="_blank" class="playstore">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+        </a>
+        
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 MobileX Accessories. All Rights Reserved. Developed by DevSphere07</p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("scroll", () => {
+      const footer = document.querySelector(".footer");
+      const scrollY = window.scrollY;
+      footer.style.backgroundPositionY = `${scrollY * 0.3}px`;
+    });
+  </script>
+  
+  
+  <!-- Font Awesome (for icons) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>

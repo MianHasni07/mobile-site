@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Accessories - Products</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+<!-- <link rel="stylesheet" href="styles.css"> -->
+<style>
+/* ===== General Page Styling ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  /* background: linear-gradient(90deg, #000, orangered); */
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+    background: linear-gradient(90deg, #000, orangered);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+    color: orangered;
+  margin: 0;
+  font-size: 1.5rem;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+header a:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.cart-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  background: rgba(255,255,255,0.1);
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.cart-link:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.products {
+  padding: 30px;
+  text-align: center;
+}
+
+.products h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: orangered;
+}
+
+/* ===== Animated Product Cards ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.product {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  /* background: linear-gradient(90deg, #000, orangered); */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+  animation-delay: calc(var(--i, 0) * 0.15s);
+}
+
+.product:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.product:hover img {
+  transform: scale(1.05);
+}
+
+.product h3 {
+  margin: 10px 0 5px;
+  color: orangered;
+}
+
+.price {
+  color: #ff4500;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ===== Animated Button ===== */
+.add-to-cart {
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #ff6633;
+  transform: scale(1.05);
+}
+
+.add-to-cart:active {
+  transform: scale(0.95);
+}
+
+/* ===== Keyframes ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+    
+    
+        <!-- <a href="index.html">🏠 Home</a> -->
+    
+  <h1>MobileX</h1>
+  <a href="cart.html" class="cart-link">🛒 Cart <span id="cart-count">0</span></a>
+  <a href="index.html">🏠 Home</a>
+</header>
+<!-- <a href="index.html">🏠 Home</a> -->
+
+<section class="products">
+  <h2>Our Products</h2>
+
+  <div class="product-grid">
+
+    <div class="product" 
+     data-id="1" 
+     data-name="Wireless Earbuds" 
+     data-price="1499" 
+     data-img="https://d1iv6qgcmtzm6l.cloudfront.net/products/lg_8x18q0LxvawLum45iL13sa5cZ3DoMLITFj3VCFnF.png">
+
+  <img src="https://d1iv6qgcmtzm6l.cloudfront.net/products/lg_8x18q0LxvawLum45iL13sa5cZ3DoMLITFj3VCFnF.png" alt="">
+  <h3>Wireless Earbuds</h3>
+  <p class="price">₹1499</p>
+  <!-- The working button -->
+  <button class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+</div>
+
+    <div class="product" style="--i:0" data-id="2" data-name="Hand free" data-price="500" data-img="https://static-01.daraz.pk/p/5767150f56443239752beef9918a86ac.jpg">
+      <img src="https://static-01.daraz.pk/p/5767150f56443239752beef9918a86ac.jpg" alt="product img">
+      <h3>Hand free</h3>
+      <p class="price">₹500</p>
+      <button class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+    </div>
+
+    <div class="product" style="--i:1" data-id="3" data-name="Fast Charger" data-price="799" data-img="https://www.shutterstock.com/image-photo/cellphones-accessories-on-banner-260nw-2558078663.jpg">
+      <img src="https://www.shutterstock.com/image-photo/cellphones-accessories-on-banner-260nw-2558078663.jpg" alt="">
+      <h3>Fast Charger</h3>
+      <p class="price">₹799</p>
+      <button class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+    </div>
+
+    <div class="product" style="--i:2" data-id="4" data-name="Mobile Case" data-price="499" data-img="https://img.drz.lazcdn.com/static/pk/p/042de60f36549d3e0df1d5714e266b60.jpg_720x720q80.jpg">
+      <img src="https://img.drz.lazcdn.com/static/pk/p/042de60f36549d3e0df1d5714e266b60.jpg_720x720q80.jpg" alt="">
+      <h3>Mobile Case</h3>
+      <p class="price">₹499</p>
+      <button class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+    </div>
+
+    <div class="product" style="--i:3" data-id="5" data-name="Power Bank" data-price="1999" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRCRrGb53jjivw624nW03IuHKzA5LT014lHQ&s">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRCRrGb53jjivw624nW03IuHKzA5LT014lHQ&s" alt="">
+      <h3>Power Bank</h3>
+      <p class="price">₹1999</p>
+      <button class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+    </div>
+  </div>
+</section>
+
+<script>
+// Select all Add to Cart buttons and cart counter
+const cartButtons = document.querySelectorAll('.add-to-cart');
+const cartCount = document.getElementById('cart-count');
+
+// Load existing cart from localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Update cart count badge
+if (cartCount) {
+  cartCount.textContent = cart.length;
+}
+
+// Add click event for each button
+cartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const product = button.closest('.product');
+    const id = product.dataset.id;
+    const name = product.dataset.name;
+    const price = parseFloat(product.dataset.price);
+    const img = product.dataset.img;
+
+    const existingProduct = cart.find(item => item.id === id);
+
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      cart.push({ id, name, price, img, quantity: 1 });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    if (cartCount) {
+      cartCount.textContent = cart.length;
+    }
+
+    // Button animation feedback
+    button.textContent = "Added ✓";
+    button.style.backgroundColor = "green";
+    button.style.transform = "scale(1.1)";
+    button.style.transition = "all 0.3s";
+
+    setTimeout(() => {
+      button.textContent = "Add to Cart";
+      button.style.backgroundColor = "orangered";
+      button.style.transform = "scale(1)";
+    }, 1000);
+  });
+});
+</script>
+
+</body>
+</html>
